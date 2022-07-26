@@ -1,0 +1,4 @@
+.~lock*
+*.csv
+testdir/
+node_modules/
