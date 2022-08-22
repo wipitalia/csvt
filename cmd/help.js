@@ -5,7 +5,7 @@ const helpCmd = () => {
         USAGE:
             csvt -h|--help
             csvt help
-            csvt [-l|--langs LANGS] OPERATION [CSVFILE [DIR]]
+            csvt [-l|--langs LANGS] OPERATION [DIR [CSVFILE]]
 
         OPERATIONS:
             help: show this help
@@ -20,8 +20,8 @@ const helpCmd = () => {
 
         ARGUMENTS:
             OPERATION: see OPERATIONS
-            CSVFILE: csv file containing structure informations. defaults to $PWD/i18n.csv
             DIR: directory containing filesystem structure. defaults to $PWD
+            CSVFILE: csv file containing structure informations. defaults to DIR/i18n.csv
     `));
 }
 

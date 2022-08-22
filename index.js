@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-const { CLIError, parseArgs } = require('./lib/utils');
+const { parseArgs } = require('./lib/utils/args');
+const CLIError = require('./lib/CliError');
 
 
 const {
