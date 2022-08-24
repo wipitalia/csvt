@@ -6,7 +6,7 @@ const exportCmd = async (csvFilename, directory, { headerLangs }) => {
 
     const langFileReader = await csvt.langFileReader(langs, directory);
 
-   langFileReader
+    langFileReader
         .pipe(csvt.csvWriter(csvFilename, langs));
 }
 
