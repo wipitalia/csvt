@@ -12,7 +12,8 @@ const helpCmd = () => {
             export: reads DIR and writes to CSVFILE
             import: deletes DIR content and creates a new structure reading CSVFILE
             update: reads CSVFILE and updates DIR without deletion
-            check: (WIP) checks CSVFILE correctness and reports not found strings
+            check: checks CSVFILE correctness
+            diff: reports differences between CSVFILE and DIR
 
         FLAGS:
             -l/--langs: comma separated list of languages dictating the order

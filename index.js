@@ -6,6 +6,7 @@ const CLIError = require('./lib/CliError');
 const {
     helpCmd,
     checkCmd,
+    diffCmd,
     exportCmd,
     importCmd,
     updateCmd,
@@ -23,6 +24,9 @@ const main = async () => {
             case 'check':
                 await checkCmd(opts.filename, opts.directory);
                 break;
+            case 'diff':
+                await diffCmd(opts.filename, opts.directory);
+                break;
             case 'export':
                 await exportCmd(opts.filename, opts.directory, {
                     headerLangs: opts.langs
@@ -37,7 +41,7 @@ const main = async () => {
         }
     } catch (err) {
         if (err.name === CLIError.name) {
-            console.error(err.message);
+            if (err.message) console.error(err.message);
             process.exit(err.exitCode);
         }
         throw err;
