@@ -1,4 +1,4 @@
-const { helpText } = require('../lib/utils');
+const { helpText } = require('../lib/utils/args');
 
 const helpCmd = () => {
     console.log(helpText(`
