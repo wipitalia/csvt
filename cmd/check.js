@@ -7,8 +7,8 @@ const checkCmd = async (csvFilename) => {
 
     if (invalidPaths.length) {
         console.error('found invalid paths:');
-        invalidPaths.forEach(({ path, conflict }) => {
-            console.error(`\t${path} (conflict: ${conflict})`);
+        invalidPaths.forEach(({ file, path, conflict }) => {
+            console.error(`\t${file}:${path} (conflict: ${conflict})`);
         });
         throw CLIError.INVALID_STR_PATH();
     }

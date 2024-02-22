@@ -6,14 +6,16 @@ const importCmd = async (csvFilename, directory) => {
     await checkCmd(csvFilename);
 
     const csvReader = csvt.csvReader(csvFilename)
-    await pipeline(
-        csvReader,
-        csvt.langFileCollector(directory, false),
-    );
-    await pipeline(
-        csvReader,
-        csvt.fileCleaner(directory),
-    );
+    await Promise.all([
+        pipeline(
+            csvReader,
+            csvt.langFileCollector(directory, false),
+        ),
+        pipeline(
+            csvReader,
+            csvt.fileCleaner(directory),
+        )
+    ]);
 }
 
 module.exports = importCmd;
