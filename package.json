@@ -1,6 +1,6 @@
 {
   "name": "csvt",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "import/export csv translations to json file directory structure",
   "main": "index.js",
   "bin": {
